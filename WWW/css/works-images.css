@@ -1,0 +1,95 @@
+/* FLEUR
+------------------------------------*/
+#chair1 {
+	background: url('../img/works/fleur/sketches-small.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#chair2 {
+	background: url('../img/works/fleur/models.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#chair3 {
+	background: url('../img/works/fleur/cad.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#chair4 {
+	background: url('../img/works/fleur/sanding.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#chair5 {
+	background: url('../img/works/fleur/chair2.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#chair6 {
+	background: url('../img/works/fleur/chair0.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+/* Executive
+------------------------------------*/
+#exec1 {
+	background: url('../img/works/exec/mood.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#exec2 {
+	background: url('../img/works/exec/sketches.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#exec3 {
+	background: url('../img/works/exec/cad.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#exec4 {
+	background: url('../img/works/exec/CNC0.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#exec5 {
+	background: url('../img/works/exec/CNC1.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#exec6 {
+	background: url('../img/works/exec/executive.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+/* LED Visualizer
+------------------------------------------*/
+#led1 {
+	background: url('../img/works/led/oneled.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#led2 {
+	background: url('../img/works/led/lattice.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#led3 {
+	background: url('../img/works/led/circuitboard.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#led4 {
+	background: url('../img/works/led/CNC0.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#led5 {
+	background: url('../img/works/led/CNC1.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#led6 {
+	background: url('../img/works/led/ledutive.jpg') no-repeat center center;
+	background-size: cover;
+}

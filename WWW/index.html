@@ -16,13 +16,16 @@
 
 	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400, 400italic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/works-images.css">
 
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -30,207 +33,278 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/detect-platform.js"></script>
+
 
 </head>
 <body>
-	<div id="canvas" >
+
+	<div id="canvas">
 		<canvas id="projector" width="100%" height="100%" >Your browser does not support the Canvas element.</canvas>
 		<div class="filter"></div>
+		
+		<div id="controls">
+			<div class="scatter control"> <i class="material-icons">shuffle</i> </div>
+			<div class="circle control"> <i class="material-icons">lens</i> </div>
+			<div class="heart control"><i class="material-icons">favorite</i></div>
+		</div>
+		<div id="hint">scroll down</div>
 	</div>
-	<div class="section nav">
+
+	<div class="section splash">
 		<div class="container">
 			<div class="row">
-				<div id="name" class="two column">	Lawrence X. Rogers	</div>
+				<div class="twelve columns" id="name"><h1>LAWRENCE X. ROGERS</h1></div>
 			</div>
 			<div class="row">
 				<div id="nav">
-					<div class="one column offset-by-four"><div id="work" class="nav-item"><a href="#">Work</a></div></div>
-					<div class="one column offset-by-one"><div id="home" class="nav-item"><a href="#">Home</a></div></div>
-					<div class="one column offset-by-one"><div id="about" class="nav-item"><a href="#">About</a></div></div>
+					<div class="one column offset-by-three"><div id="about" class="nav-item"><a href="#">About</a></div></div>
+					<div class="one column offset-by-one"><div id="work" class="nav-item"><a href="#">Work</a></div></div>
+					<div class="one column offset-by-one"><div id="resume" class="nav-item"><a href="#">Resume</a></div></div>
+					<div class="one column offset-by-one"><div id="contact" class="nav-item"><a href="#">Contact</a></div></div>
 				</div>
-
 			</div>
 		</div>
 	</div>
 	
-	<div id="work_section" class="section works">
-		<div class="scroll-wrapper">
-			<div class="container"> 
-				<div class="row">
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/executive.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/executive.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="row">
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="row">
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="row">
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-					<div class="one-half column">
-						<div class="work">
-							<div class="bottom">
-								<img src='img/me.jpg'>
-							</div>
-							<div class="overlay">
-								<h1>Executive</h1>
-								<h2>Mechanical Keyboard</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="spacer"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section hero">	
+	<div class="section about"> 
 		<div class="container">
-			<div class="row headline">
-				<div class="one-third column">
-					<h1 id="designer" class="iam">Designer</h1>
+			<div class="row" id="about-heading">
+				<div class="twelve columns">
+					<h1>ABOUT</h1>
 				</div>
-				<div class="one-third column">
-					<h1 id="innovator" class="iam">Innovator</h1>
-				</div>
-				<div class="one-third column">
-					<h1 id="engineer" class="iam">Engineer</h1>
-				</div>
+			</div>
+			<div class="row" id="about-intro">
+				<div class="ten columns offset-by-one">
+					<p>
+					Hi, I'm Lawrence! <br/><br/>
+					I've been making things as long as I can remember--I even started coding at age 11 on my TI-83 Graphing Calculator!<br/><br/>
 
-				<!-- <span id="gradient"><span> -->
+					Over the years I've picked up a ton of skills, from native android develpment to TIG welding, to Design Thinking. I've worked at big tech companies like Facebook & Google, and I've also locked myself in my room for days at a time designing bottle openers. <br/><br/>
+
+					I'm confident that the combination of design and engineering leads to innovation.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="one-third column">
+					<i class="material-icons" style="color: red">favorite</i> 
+					<h5>DESIGN</h5>
+				</div>
+				<div class="one-third column">
+					<i class="material-icons" style="color: #95EDC9">lens</i> 
+					<h5>ENGINEERING</h5>
+				</div>
+				<div class="one-third column">
+					<i class="material-icons">shuffle</i> 
+					<h5>INNOVATION</h5>
+				</div>
+			</div>
+
+			<div class="row" style="padding-top: 5%">
+				<div class="ten columns offset-by-one">
+					<p>
+					But, none of that matters as much to me as putting what I know to work to solve impossible challenges.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	
-	</div>
-	<div id="about_section" class="section about"> 
-		<div class="scroll-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="one-third column">
-						<img src="img/me.jpg"/>
-					</div>
-					<div class="two-thirds column black">
-						<h1>Hi, I'm Lawrence!</h1>
-						I'm studying Product Design and Computer Science at Stanford. <br/>
-						I have a passion for creating awesome experiences, with the eye of a designer and the skills of an engineer. <br/>
-						Over the years, I've interned at companies like Facebook and Google, and I'm ready for the next challenge!<br/>
-						
-					</div>
+
+	<div class="section works">
+		<div class="container">
+			<div class="row margin-bottom-10" id="works-heading">
+				<div class="twelve columns">
+					<h1>WORK</h1>
 				</div>
-				<div class="row" style="padding-top: 2%"/>
-				<div class="row center">
-					<div class = "one-third column black">
-						<br/>
-						<h5>Resume</h5>
-						KoallaBallahs Games Co-Founder 2011<br/>
-						Aeria Games SWE Intern 2012<br/>
-						Facebook SWE Intern 2013<br/>
-						Google APM Intern 2015
+			</div>
+			<div class="row">
+				<div class="slide-nav">
+					<div class="slide-nav-item slide-back">
+						<i class="material-icons">arrow_back</i>
 					</div>
-					<div class = "one-third column black">
-						<br/>
-						<h5>Bacon</h5>
-					</div>
-					<div class = "one-third column black">
-						<br/>
-						<h5>Contact</h5>
-						<a href="mailto:lawrence.x.rogers@gmail.com"> Email </a> <br/>
-						<a href="http://lxrogers.wordpress.com"> Blog </a> <br/>
-						<a href="https://www.linkedin.com/pub/lawrence-rogers/57/257/899"> LinkedIn </a>
+					<div class="slide-nav-item slide-close">
+						<i class="material-icons">cancel</i>
 					</div>
 				</div>
 			</div>
-			<div class="spacer"/>
+			<!-- ***FLEUR*** -->
+			<div class="row">
+				<div class="twelve columns margin-bottom-10">
+					<div class="work">
+						<div class="slide-deck">
+							<div id="chair1" class="slide"></div>
+							<div id="chair2" class="slide"></div>
+							<div id="chair3" class="slide"></div>
+							<div id="chair4" class="slide"></div>
+							<div id="chair5" class="slide"></div>
+							<div id="chair6" class="slide"></div>
+						</div>
+						<div class="bottom">
+							<img src='img/works/fleur/chair0.jpg'>
+						</div>
+						<div class="overlay">
+							<h2>Fleur</h2>
+							<h6 class="subtitle">Industrial Design / TIG / Upholstery</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ***Executive*** -->
+			<div class="row">
+				<div class="slide-nav">
+					<div class="slide-nav-item slide-back">
+						<i class="material-icons">arrow_back</i>
+					</div>
+					<div class="slide-nav-item slide-close">
+						<i class="material-icons">cancel</i>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns margin-bottom-10">
+					<div class="work">
+						<div class="slide-deck">
+							<div id="exec1" class="slide"></div>
+							<div id="exec2" class="slide"></div>
+							<div id="exec3" class="slide"></div>
+							<div id="exec4" class="slide"></div>
+							<div id="exec5" class="slide"></div>
+							<div id="exec6" class="slide"></div>
+						</div>
+						<div class="bottom">
+							<img src='img/works/exec/executive.jpg'>
+						</div>
+						<div class="overlay">
+							<h2>Executive Keyboard</h2>
+							<h6 class="subtitle">Industrial Design / CAD / CNC Machining</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ***LED*** -->
+			<div class="row">
+				<div class="slide-nav">
+					<div class="slide-nav-item slide-back">
+						<i class="material-icons">arrow_back</i>
+					</div>
+					<div class="slide-nav-item slide-close">
+						<i class="material-icons">cancel</i>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns margin-bottom-10">
+					<div class="work">
+						<div class="slide-deck">
+							<div id="led1" class="slide"></div>
+							<div id="led2" class="slide"></div>
+							<div id="led3" class="slide"></div>
+							<div id="led4" class="slide"></div>
+							<div id="led5" class="slide"></div>
+							<div id="led6" class="slide"></div>
+						</div>
+						<div class="bottom">
+							<iframe id="player" width="1000" height="400" src="https://www.youtube.com/embed/Cqr20Pu2hJA?rel=0&controls=0&showinfo=0&autoplay=1&start=5&loop=1&playlist=Cqr20Pu2hJA" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="overlay">
+							<h2>LED Music Visualizer</h2>
+							<h6 class="subtitle">Rapid Prototyping / Arduino </h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
+	<div class="section resume"> 
+		<div class="container">
+			<div class="row">
+				<div class="four columns"><h1>RESUME</h1></div>
+			</div>
+			<div class="row">
+				<div class="three columns" style="text-align: right">
+					<h6>GOOGLE</h6><br/>
+					<i>Summer 2015 </i><br/>
+				</div>
+				<div class="eight columns">
+					<h6 class="title">ASSOCIATE PRODUCT MANAGER INTERN </h6><br/>
+					Drove several high priority features for the new google Photos app through research, design and engineering stages
+					Developed strategy for activating users with Photos pre-installed
+				</div>
+			</div>
+			<div class="row">
+				<div class="three columns " style="text-align: right">
+					<h6>FACEBOOK </h6> <br/>
+					<i>Summer 2013 </i><br/>
+				</div>
+				<div class="eight columns">
+					<h6 class="title">SOFTWARE ENGINEERING INTERN </h6><br/>
+					Built data demand monitoring tool for Facebook Android
+					Established cross-team collaboration between Demand Control and Android teams
+				</div>
+			</div>
+			<div class="row">
+				<div class="three columns" style="text-align: right">
+					<h6>AERIA GAMES</h6><br/>
+					<i>Summer 2012 </i><br/>
+				</div>
+				<div class="eight columns">
+					<h6 class="title">SOFTWARE ENGINEERING INTERN </h6><br/>
+					Full-stack engineer on PHP/Javascript front-end, MySQL database
 
+				</div>
+			</div>
+			<div class="row">
+				<div class="three columns " style="text-align: right">
+					<h6>KOALABALLAHS </h6> <br/>
+					<i>Summer 2011 </i><br/>
+				</div>
+				<div class="eight  columns">
+					<h6 class="title">CO-FOUNDER, CODER </h6><br/>
+					Designed and created Android Game "Flick Defense"
+					Received over 50,000 free and 10,000 paid downloads
+					Winner of 5Across August Pitch Competition
+				</div>
+			</div>
+				
+		</div>
+	</div>
+	
+	<div class="section contact"> 
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h1>Contact</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="four columns">
+					<a href="mailto:lawrence.x.rogers@gmail.com">
+					email
+					</a>
+				</div>
+				<div class="four columns">
+					<a href="https://lxrogers.wordpress.com" target="_blank">wordpress</a>
+				</div>
+				<div class="four columns">
+					<a href="https://www.linkedin.com/pub/lawrence-rogers/57/257/899" target="_blank">
+					linkedin
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-	<script src="js/animate-nav.js"></script>
-	<script src="js/animate-hero.js"></script>
+	<script src="js/parallax.js"></script>
 	<script src="js/particles.js"></script>
+	<script src="js/animate-splash.js"></script>
+	<script src="js/animate-nav.js"></script>
 	<script src="js/works.js"></script>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
